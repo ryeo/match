@@ -1,0 +1,408 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|align": "stretchmax",
+        "container|pack": "center",
+        "designer|userClassName": "MyContainer",
+        "designer|initialView": true,
+        "itemId": "container1",
+        "layout": "vbox"
+    },
+    "id": "ExtBox1-ext-gen6924",
+    "designerId": "6f08723d-ee5a-4afc-b312-8be8ad64ebf2",
+    "cn": [
+        {
+            "type": "spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySpacer",
+                "html": "Movie Kiosk",
+                "itemId": "space1",
+                "style": null
+            },
+            "configAlternates": {
+                "style": "object"
+            },
+            "designerId": "2939b3c9-55e7-4d5e-9ca6-abc2633996f1"
+        },
+        {
+            "type": "carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|flex": 2,
+                "designer|userClassName": "MyCarousel",
+                "designer|userAlias": "mycarousel",
+                "docked": null,
+                "html": null,
+                "itemId": "mycarousel",
+                "padding": "10px 10px 10px 10px",
+                "style": null,
+                "styleHtmlContent": true,
+                "width": ""
+            },
+            "designerId": "40253907-c273-4e45-b27c-415587c2c98f",
+            "cn": [
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Toy Story 3",
+                        "designer|userClassName": "MyImage",
+                        "cls": [
+                            "Toy Story 3"
+                        ],
+                        "height": null,
+                        "id": null,
+                        "itemId": null,
+                        "width": null,
+                        "src": "http://content6.flixster.com/movie/11/13/43/11134356_pro.jpg"
+                    },
+                    "designerId": "eeff2a0e-7a57-4f5f-b409-0900ca22a6b5",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Ghost Protocol",
+                        "designer|userClassName": "MyImage1",
+                        "cls": [
+                            "Mission Impossible Ghost Protocol"
+                        ],
+                        "height": null,
+                        "width": null,
+                        "src": "http://content9.flixster.com/movie/11/16/11/11161107_pro.jpg"
+                    },
+                    "designerId": "9338c38a-3111-4372-8e8f-6ad8afdaed31",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Girl with Dragon Tattoo",
+                        "designer|userClassName": "MyImage2",
+                        "cls": [
+                            "Girl with Dragon Tattoo"
+                        ],
+                        "height": null,
+                        "width": null,
+                        "src": "http://content8.flixster.com/movie/11/16/10/11161098_pro.jpg"
+                    },
+                    "designerId": "0528335e-3bd8-4745-80bb-dd1d6ae9c320",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "image",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Tintin",
+                        "rob": null,
+                        "designer|userClassName": "MyImage3",
+                        "cls": [
+                            "Tintin"
+                        ],
+                        "height": null,
+                        "width": null,
+                        "src": "http://content6.flixster.com/movie/11/15/75/11157588_pro.jpg"
+                    },
+                    "designerId": "f8761b43-8aff-428b-bc22-831e487ba281",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "title",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "rob",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMycarouselActivate",
+                        "fn": "onMycarouselActivate",
+                        "implHandler": [
+                            "\r",
+                            "var pubnub = PUBNUB.init({\r",
+                            "    publish_key   : 'demo',\r",
+                            "    subscribe_key : 'demo',\r",
+                            "    ssl           : false,\r",
+                            "    origin        : 'pubsub.pubnub.com'\r",
+                            "});\r",
+                            "\r",
+                            "var current=container.getActiveItem();\r",
+                            "console.log(current.getItemId());\r",
+                            "\r",
+                            "console.log('ROB');\r",
+                            "\r",
+                            "/*\r",
+                            "pubnub.publish({\r",
+                            "channel : \"robert\",\r",
+                            "message  : { \r",
+                            "name    : \"chat_message\",\r",
+                            "data    : {\r",
+                            "message : currHTML\r",
+                            "} \r",
+                            "},\r",
+                            "callback : function(message) {\r",
+                            "console.log('Message Sent '+currHTML);\r",
+                            "}\r",
+                            "});\r",
+                            "*/\r",
+                            "\r",
+                            "var counter=0\r",
+                            "setInterval(\r",
+                            "function () {\r",
+                            "\r",
+                            "    var me = container;\r",
+                            "\r",
+                            "    me.next();\r",
+                            "\r",
+                            "    setTimeout(function(){\r",
+                            "        console.log('Timeout Called After Delay');\r",
+                            "        var active= me.getActiveItem();\r",
+                            "        console.log(me.getActiveIndex());\r",
+                            "        console.log(active.getItemId());\r",
+                            "        var start = new Date();\r",
+                            "        console.log(start);\r",
+                            "\r",
+                            "\r",
+                            "        pubnub.publish({\r",
+                            "            channel : \"robert\",\r",
+                            "            message  : { \r",
+                            "                data    : {\r",
+                            "                    message : active.getCls(),\r",
+                            "                    time    : start\r",
+                            "                } \r",
+                            "            },\r",
+                            "            callback : function(message) {\r",
+                            "                console.log('Message Sent '+active.getCls());\r",
+                            "\r",
+                            "            }\r",
+                            "        });\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "    }, 500);\r",
+                            "\r",
+                            "    //var active= me.getActiveItem();\r",
+                            "    //var color= active.getItemId();\r",
+                            "\r",
+                            "    //active= me.getActiveItem();\r",
+                            "    //console.log(me.getActiveIndex());\r",
+                            "    //console.log(active.getItemId())\r",
+                            "\r",
+                            "    /*\r",
+                            "    pubnub.publish({\r",
+                            "    channel : \"robert\",\r",
+                            "    message  : { \r",
+                            "    name    : \"chat_message\",\r",
+                            "    data    : {\r",
+                            "    message : color\r",
+                            "    } \r",
+                            "    },\r",
+                            "    callback : function(message) {\r",
+                            "    console.log('Message Sent '+color);\r",
+                            "    }\r",
+                            "    });\r",
+                            "    */\r",
+                            "\r",
+                            "\r",
+                            "    if (me.getActiveIndex() === me.getMaxItemIndex()) {\r",
+                            "        me.setActiveItem(0);\r",
+                            "\r",
+                            "    }\r",
+                            "\r",
+                            "\r",
+                            "}, \r",
+                            "15000); // setInterval()\r",
+                            "\r",
+                            "\r",
+                            "//Set Alert\r",
+                            "pubnub.subscribe({\r",
+                            "    channel  : \"robert2\",\r",
+                            "    callback : function(message) { \r",
+                            "        console.log(message);\r",
+                            "        var msg = message.data.message;\r",
+                            "        \r",
+                            "        if (msg=='Like'){\r",
+                            "            Ext.Msg.alert(' ', 'Great Movie!!', Ext.emptyFn);\r",
+                            "        }\r",
+                            "        if (msg=='Nope'){\r",
+                            "            Ext.Msg.alert(' ', 'Thumbs Down!!', Ext.emptyFn);\r",
+                            "        }    \r",
+                            "    },\r",
+                            "    error    : function(e) {\r",
+                            "        // Do not call subscribe() here!\r",
+                            "        // PUBNUB will auto-reconnect.\r",
+                            "        console.log(e);\r",
+                            "    }\r",
+                            "});\r",
+                            "\r",
+                            "\r",
+                            "\r",
+                            "/*\r",
+                            "pubnub.subscribe({\r",
+                            "channel : \"sencha_chat\",\r",
+                            "message  : { \r",
+                            "name    : \"chat_message\",\r",
+                            "data    : {\r",
+                            "message : 'test message',\r",
+                            "user    : 'user'\r",
+                            "} \r",
+                            "},\r",
+                            "callback : function(message) {\r",
+                            "}\r",
+                            "});\r",
+                            "*/\r",
+                            "\r",
+                            "/*\r",
+                            "pubnub.publish({\r",
+                            "channel : \"sencha_chat\",\r",
+                            "message  : { \r",
+                            "name    : \"chat_message\",\r",
+                            "data    : {\r",
+                            "message : 'test message',\r",
+                            "user    : 'user'\r",
+                            "} \r",
+                            "},\r",
+                            "callback : function(message) {\r",
+                            "console.log('Message Sent');\r",
+                            "}\r",
+                            "});\r",
+                            "*/\r",
+                            "\r",
+                            "\r",
+                            "// preload prev chats \r",
+                            "/*\r",
+                            "pubnub.history({\r",
+                            "channel : 'sencha_chat',\r",
+                            "limit : 5\r",
+                            "//messages[0] is the actual array you want \r",
+                            "}, function(messages) {\r",
+                            "\r",
+                            "\r",
+                            "var messageArray=messages[0];\r",
+                            "console.log(messageArray.length);\r",
+                            "\r",
+                            "//for (var i = 0, j = messageArray.length; i < j; i += 1)  {\r",
+                            "// Queue is FIFO\r",
+                            "for (var i = messageArray.length - 1; i >= 0; i -= 1) {\r",
+                            "    // do some stuff here\r",
+                            "    var message = messageArray[i];\r",
+                            "\r",
+                            "    console.log(message);\r",
+                            "    /*\r",
+                            "    if (message.text){\r",
+                            "\r",
+                            "    }\r",
+                            "    else if (message.name && (message.name == 'chat_message')){\r",
+                            "    console.log('Message'+message.data.message); \r",
+                            "    }*/\r",
+                            "    //    }\r",
+                            "\r",
+                            "    //}); \r",
+                            "\r",
+                            "\r",
+                            ""
+                        ],
+                        "name": "activate"
+                    },
+                    "designerId": "686ec1ae-1636-44cd-b295-d5b844f0ef19"
+                }
+            ]
+        },
+        {
+            "type": "spacer",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MySpacer1",
+                "html": ""
+            },
+            "designerId": "2c86c872-f043-410c-8eeb-55aa7c2e140e"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerActivate",
+                "fn": "onContainerActivate",
+                "implHandler": [
+                    "console.log('ROB');\r",
+                    "\r",
+                    "var current=container.getActiveItem();\r",
+                    "console.log(current.getItemId());\r",
+                    "\r",
+                    "current = container.setActiveItem(1);\r",
+                    "console.log('Active '+current.getItemId());"
+                ],
+                "name": "activate"
+            },
+            "designerId": "7a2b708c-e46e-4a65-9167-3cdff179c8e2"
+        }
+    ]
+}

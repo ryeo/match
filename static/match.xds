@@ -1,0 +1,61 @@
+{
+    "name": "match",
+    "settings": {
+        "urlPrefix": "http://localhost/match",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 678,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "238d5289-e1ca-4f78-9e15-a36007362693": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "2c842ae9-981f-4223-ad86-8bef2a1f8b78": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        },
+        "6f08723d-ee5a-4afc-b312-8be8ad64ebf2": {
+            "paths": [
+                "metadata/view/MyContainer",
+                "app/view/override/MyContainer.js",
+                "app/view/MyContainer.js"
+            ],
+            "className": "MyContainer"
+        },
+        "001e2bdc-4c96-4747-a316-392dcd8d04d7": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "6f08723d-ee5a-4afc-b312-8be8ad64ebf2"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "238d5289-e1ca-4f78-9e15-a36007362693",
+            "2c842ae9-981f-4223-ad86-8bef2a1f8b78",
+            "001e2bdc-4c96-4747-a316-392dcd8d04d7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

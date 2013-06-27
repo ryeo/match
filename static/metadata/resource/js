@@ -1,0 +1,15 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "http://cdn.pubnub.com/pubnub-3.4.min.js",
+        "defer": true,
+        "id": "Pubnub"
+    },
+    "id": "ExtBox1-ext-gen7704",
+    "designerId": "2c842ae9-981f-4223-ad86-8bef2a1f8b78"
+}

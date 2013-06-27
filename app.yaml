@@ -1,0 +1,49 @@
+application: seee2sky
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /favicon\.ico
+  static_files: static/images/128_1.ico
+  upload: static/images/128_1\.ico
+- url: /static/app.js
+  static_files: static/app.js
+  upload: static/app.js
+- url: /app
+  static_dir: static/app
+- url: /styles
+  static_dir: static/styles
+- url: /resources/images
+  static_dir: static/resources/images
+- url: /.*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: "2.6"
+
+env_variables:
+  TMP: C:\Users\ryeo\AppData\Local\Temp
+  #sqlite error workaround - maybe remove for production or deploy
+
+skip_files: |
+   ^(.*/)?(
+   (app\.yaml)|
+   (app\.yml)|
+   (index\.yaml)|
+   (index\.yml)|
+   (#.*#)|
+   (.*~)|
+   (.*\.py[co])|
+   (.*/RCS/.*)|
+   (\..*)|
+   (static/metadata/.*)|
+   (static/metadata/(controller|model|resource|store|view)/.*)|
+   (.*\.xds)|
+   )$
+# Custom Skip files
+
